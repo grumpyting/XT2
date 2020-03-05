@@ -3,7 +3,6 @@
 	<head>
 		<title>hello world</title>
 		<meta charset="utf-8"/>
-		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="chartist.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://kit.fontawesome.com/8609a8999a.js" crossorigin="anonymous"></script>
@@ -13,10 +12,11 @@
 
 	</head>
 		<body>
+			<div class="container">
 				<header></header>
 				<nav id="nav">
-  					<a href="index.html">
-						<i class="far fa-clock" href="clock.html"></i>
+  					<a href="clock.html">
+						<i class="far fa-clock"></i>
 					</a>
   					<a href="food.html">
 						<i class="fas fa-utensils" href=""></i>
@@ -28,42 +28,41 @@
 						<i class="fas fa-gas-pump" href="#"></i>
 					</a>							 
 				</nav>
-
-
-				<section>
-					<div class="ct-chart ct-perfect-fourth">
-						<p>Food</p>
-					</div>
-
-					<div class="ct-chart ct-perfect-fifth">
-						<p>Water</p>
-					</div>
-
-				</section>
-
+				<article class="card">
+					<h3>Elon Musk Re Releases the flamethrower</h3>
+					<img src="img/elon.jpg">
+					<p>Fire extinguisher sold separately (for exorbitant amounts of money) Additional customs fees may apply for international orders because...</p>
+					<a href="#">Read more</a>
+				</article>
+				
+				<div class="ct-chart ct-perfect-fourth">
+					
+				</div>
+				<a href="#nav">
+					<i class="fas fa-arrow-up" href="#"></i>
+				</a>	
+			</div>
 	
    </body>
 	
 	</html>
+
 <script>
-new Chartist.Pie('.ct-perfect-fourth', {
-  series: [20, 10, 30, 40]
+
+new Chartist.Line('.ct-chart', {
+  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  series: [
+    [0,400, 500, 600, 650]
+
+  ]
 }, {
-  donut: true,
-  donutWidth: 20,
-  donutSolid: true,
-  startAngle: 0,
-  showLabel: true
+  fullWidth: false,
+  chartPadding: {
+    right: 40
+  }
 });
 
-new Chartist.Pie('.ct-perfect-fifth', {
-  series: [75, 25]
-}, {
-  donut: true,
-  donutWidth: 20,
-  donutSolid: true,
-  startAngle: 0,
-  showLabel: true
-});
+
 
 </script>
+

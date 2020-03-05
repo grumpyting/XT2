@@ -14,9 +14,9 @@ nav{
 
 nav > a{
 	background-color: pink;
-	padding: 12px;
+	padding: 14px;
 	margin: 0px 17px 10px 17px;
-	border-radius: 30px;
+	border-radius: 36px;
 }
 
 
@@ -36,12 +36,25 @@ img{
 	max-width: 100%;
 }
 
-.card{
-	width: 280px;
-	border: 1px solid black; 
+#landing{
+	background-color: #0f1112;
 }
 
-#canvas{
-	height: 35%;
-	width: 100%;
+#landingLogo{
+
+}
+
+.card{
+	width: 280px;
+	border: 1px solid #F0F0F0;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.19);
+	margin-bottom: 20px;
+}
+
+
+
+@media (min-width: 400px){
+	background-color:red;
 }
