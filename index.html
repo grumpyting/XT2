@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-	<html>
 	<head>
 		<title>hello world</title>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="chartist.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://kit.fontawesome.com/8609a8999a.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="chartist.js"></script>
-
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="chartist.js"></script>
 
 	</head>
+	<body>
 		<body>
 
 				<header id="header">
@@ -30,8 +30,8 @@
 						<i class="fas fa-gas-pump"></i>
 					</a>							 
 				</nav>
-				
-			
+			<div>	
+				<div class="tabletContainer">
 				<article id="card" class="card">
 					<h3>Elon Musk Re Releases the flamethrower</h3>
 					<img src="img/elon.jpg">
@@ -46,8 +46,10 @@
 
 				</div>
 
+				</div>
+			</div>
 
-
+			<div class="secondRow">
 				<section id="food">
 					<p>Food</p>
 					<div class="ct-chart ct-perfect-fourth foodChart"></div>
@@ -70,7 +72,7 @@
 								<label for="check4">check4</label><br>
 					</article>
 
-					<article class="checklist">
+					<article class="checklist" id="checklist2">
 						<h3>Checklist 2</h3>
 							<input type="checkbox" name="check1" value="Bike">
  								<label for="check1"> check1</label><br>
@@ -89,7 +91,7 @@
 
 				</section>
 
-			
+			<div class="thirdRow">
 				<article id="fuel">
 					<div class="title">
 						<h2>Fuel</h2>
@@ -105,7 +107,7 @@
 					</div>
 					<div class="ct-chart ct-perfect-fourth batteryChart "></div>
 				</article>
-
+			</div>
 				<a href="#header">
 					<i class="fas fa-arrow-up" href="#"></i>
 				</a>		
@@ -183,4 +185,3 @@ new Chartist.Pie('.batteryChart', {
 
 
 </script>
-

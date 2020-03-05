@@ -38,7 +38,7 @@ header > p{
 
 section{
   width: 50%;
-  height: 50%;
+
   border-style: solid 1px black;
 }
 
@@ -115,22 +115,34 @@ img{
 	border: 1px solid black;
 }
 
+@media (min-width: 400px){
 
-@media only screen and (max-device-width:400px){
 	.tabletContainer{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: center;
 	}
+
+	.card{
+		margin-left: 100px;
+	}
+	.lineChart{
+		width: 450px;
+	}
+	#food{
+		width: 200px;
+		float:right;
+		margin-left: 100px;
 	}
 
-}
-
-@media only screen and (min-device-width: 400px) and (max-device-width:960px){
-	
-	body{
-
-		
+	.secondRow{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	#checklist2{
+		margin-left:150px;
 	}
 
 	header{
@@ -150,17 +162,23 @@ img{
 		display: none;	
 	}
 
-/*	.card , .lineChart , #food{
-		width: 400px;
-		max-height: 350px;
-		
-		float: left;
-		display: inline-block;
-	}*/
+
 
 	.tabletContainer{
 		display: flex;
 
 	}
-}
 
+	.thirdRow{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.secondRow > #check{
+		display: flex;
+		margin-left: 150px;
+		flex-direction: row;
+		justify-content: center;
+	}
+}
