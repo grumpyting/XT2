@@ -2,7 +2,9 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	margin: 0 auto;
+	width: 100%;
 }
 
 nav{
@@ -13,17 +15,25 @@ nav{
 }
 
 nav > a{
-	background-color: pink;
+	background-color: grey;
+	color: white;
 	padding: 14px;
 	margin: 0px 17px 10px 17px;
 	border-radius: 36px;
 }
 
+h2{
+	margin-bottom: 10px;
+}
 
 header{
 	background-color: black;
-	height: 55px;
+	height: 45px;
 	width: 100%;
+}
+header > p{
+	color: #EAEAEA;
+	margin-left: 5px;
 }
 
 section{
@@ -40,21 +50,118 @@ img{
 	background-color: #0f1112;
 }
 
-#landingLogo{
+#logoLanding{
+	width:75% ;
+	margin: 40% 0 0 17%;
 
 }
 
-.card{
-	width: 280px;
+.buttons a{
+	background-color: #E5E5E5;
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px 5px 20px 5px;
+
+}
+
+#check{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.card, .checklist{
+
+	width: 240px;
 	border: 1px solid #F0F0F0;
-	padding: 10px;
+	padding: 5px 10px 10px 10px;
 	border-radius: 3px;
 	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.19);
 	margin-bottom: 20px;
+	
+}
+
+.checklist > input{
+	margin-bottom: 10px;
+
+}
+
+.gauge{
+
+}
+
+.flexContainer{
+	display: flex;
+	flex-direction: row;
+
+
+}
+
+#battery{
+	display: flex;
+	flex-direction: row;
+	width: 320px;
+	height: 150px;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+#fuel{
+	display: flex;
+	flex-direction: row;
+	width: 320px;
+	height: 150px;
+	border: 1px solid black;
 }
 
 
+@media only screen and (max-device-width:400px){
+	.tabletContainer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	}
 
-@media (min-width: 400px){
-	background-color:red;
 }
+
+@media only screen and (min-device-width: 400px) and (max-device-width:960px){
+	
+	body{
+
+		
+	}
+
+	header{
+		height: 100%;
+		width: 90px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 20px;
+
+	}
+
+	nav{
+		display: none;	
+	}
+
+/*	.card , .lineChart , #food{
+		width: 400px;
+		max-height: 350px;
+		
+		float: left;
+		display: inline-block;
+	}*/
+
+	.tabletContainer{
+		display: flex;
+
+	}
+}
+
+

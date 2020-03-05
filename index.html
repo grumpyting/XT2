@@ -3,8 +3,6 @@
 	<head>
 		<title>hello world</title>
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="chartist.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://kit.fontawesome.com/8609a8999a.js" crossorigin="anonymous"></script>
@@ -13,10 +11,177 @@
 
 
 	</head>
-	<body id="landing">
-		<a href="clock.html" ><img id="logoLanding" src="img/logo.png"> </a>
-		
-	
-	</body>
+		<body>
+
+				<header id="header">
+					<p><i class="fas fa-user"></i> Garrus Vakarian</p>
+				</header>
+				<nav id="nav">
+  					<a href="#card">
+						<i class="far fa-clock"></i>
+					</a>
+  					<a href="#food">
+						<i class="fas fa-utensils"></i>
+					</a>
+  					<a href="#check">
+						<i class="fas fa-check"></i>
+					</a>
+  					<a href="#gas">
+						<i class="fas fa-gas-pump"></i>
+					</a>							 
+				</nav>
+				
+				<div class="tabletContainer">
+				<article id="card" class="card">
+					<h3>Elon Musk Re Releases the flamethrower</h3>
+					<img src="img/elon.jpg">
+					<p>Fire extinguisher sold separately (for exorbitant amounts of money) Additional customs fees may apply for international orders because...</p>
+					<a href="#">Read more</a>
+				</article>
+				
+				<div class="ct-chart ct-perfect-fourth lineChart"></div>
+				<div class="buttons">
+					<a href="#">Estimated arrival 20-05-2035</a>
+					<a href="#">Days since departure 52 days</a>
+
+				</div>
+
+
+
+				<section id="food">
+					<p>Food</p>
+					<div class="ct-chart ct-perfect-fourth foodChart"></div>
+
+					<p>Water</p>
+					<div class="ct-chart ct-perfect-fourth drinkChart "></div>
+
+				</section>
+			</div>
+
+				<section id="check">
+					<article class="checklist">
+						<h3>Checklist 1</h3>
+							<input type="checkbox" name="check1" value="Bike">
+ 								<label for="check1"> check1</label><br>
+ 							<input type="checkbox" name="check2" value="Car">
+								<label for="check2">check2</label><br>
+							<input type="checkbox" name="check3" value="Bike">
+ 								<label for="check3"> check3</label><br>
+ 							<input type="checkbox" name="check4" value="Car">
+								<label for="check4">check4</label><br>
+					</article>
+
+					<article class="checklist">
+						<h3>Checklist 2</h3>
+							<input type="checkbox" name="check1" value="Bike">
+ 								<label for="check1"> check1</label><br>
+ 							<input type="checkbox" name="check2" value="Car">
+								<label for="check2">check2</label><br>
+							<input type="checkbox" name="check3" value="Bike">
+ 								<label for="check3"> check3</label><br>
+ 							<input type="checkbox" name="check4" value="Car">
+								<label for="check4">check4</label><br>
+					</article>
+				</section>
+
+				<section id="gas">
+					<h2>Speed</h2>
+					<div class="ct-chart .ct-major-twelfth gauge"></div>
+
+				</section>
+
+			
+				<article id="fuel">
+					<div class="title">
+						<h2>Fuel</h2>
+						<p>70% Fuel Left</p>
+					</div>
+					<div class="ct-chart ct-perfect-fourth gasChart "></div>
+				</article>
+				
+				<article id="battery">
+					<div class="title">
+						<h2>Battery</h2>
+						<p>60% Battery Left</p>
+					</div>
+					<div class="ct-chart ct-perfect-fourth batteryChart "></div>
+				</article>
+
+				<a href="#header">
+					<i class="fas fa-arrow-up" href="#"></i>
+				</a>		
+   </body>
 	
 	</html>
+
+<script>
+
+new Chartist.Line('.lineChart', {
+  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  series: [
+    [0,400, 500, 600, 650]
+
+  ]
+}, {
+  fullWidth: false,
+  chartPadding: {
+    right: 40
+  }
+});
+
+
+
+new Chartist.Pie('.foodChart', {
+  series: [20, 10, 30, 40]
+}, {
+  donut: true,
+  donutWidth: 20,
+  donutSolid: true,
+  startAngle: 0,
+  showLabel: true
+});
+
+new Chartist.Pie('.drinkChart', {
+  series: [75, 25]
+}, {
+  donut: true,
+  donutWidth: 20,
+  donutSolid: true,
+  startAngle: 0,
+  showLabel: true
+});
+
+
+new Chartist.Pie('.gauge', {
+  series: [80]
+}, {
+  donut: true,
+  donutWidth: 15,
+  startAngle: 270,
+  total: 200,
+  showLabel: true
+});
+
+new Chartist.Pie('.gasChart', {
+  series: [70, 30]
+}, {
+  donut: true,
+  donutWidth: 20,
+  donutSolid: true,
+  startAngle: 0,
+  showLabel: true
+});
+
+new Chartist.Pie('.batteryChart', {
+  series: [60, 40]
+}, {
+  donut: true,
+  donutWidth: 20,
+  donutSolid: true,
+  startAngle: 0,
+  showLabel: true
+});
+
+
+</script>
+
